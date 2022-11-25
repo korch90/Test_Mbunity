@@ -1,0 +1,35 @@
+.wrapper{
+    z-index: 5;
+    background-color: rgb(174, 155, 155);
+    width: 300px;
+}
+.div1{
+width: 200px;
+height: 200px;
+background-color: rgb(223, 137, 137);
+margin: 50px auto;
+position: relative;
+z-index: 4;
+overflow: hidden;
+}
+.div2{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(34, 111, 124, 0.844);
+   border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+    top: -30px;
+    }
+    .div3{
+        width: 100px;
+        height: 100px;
+        background-color: rgba(107, 7, 92, 0.844);
+       border-radius: 50%;
+        position: absolute;
+        z-index: 2;
+        left: -30px; 
+        opacity: 1;
+        overflow: hidden;
+        
+        }

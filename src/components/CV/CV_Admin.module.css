@@ -1,0 +1,45 @@
+.container{
+  min-width: 300px;
+  height: 300px;
+display: flex;
+flex-direction: column;
+align-content: center;
+justify-content: center;
+background-color: rgb(56, 137, 167);
+align-items: center;
+border-radius: 20px;
+margin-top: 30px;
+}
+.form{
+  display: flex;
+flex-direction: column;
+align-content: center;
+justify-content: center;
+width: 80%;
+
+
+}
+.formSection{
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-weight:900;
+
+}
+.btn{
+  font-weight:900;
+  background-color: rgb(24, 92, 229);
+  width: 100px;
+  border-radius: 5px;
+  color: aliceblue;
+  padding: 5px;
+  margin: 15px auto;
+}
+p{
+  animation: none;
+
+  
+}
+
+  
+

@@ -1,0 +1,33 @@
+.logo_img{
+    width: 150px;
+    height: 50px;
+}
+.logo{
+    position: absolute;
+    left: 15px;
+    top:20px;
+    z-index: 2;
+    /* animation: logoAnime 16.2s  ease-in; */
+}
+.logoMove{
+    position: absolute;
+    left: 15px;
+    top:20px;
+    z-index: 2;
+    animation: logoAnime 16.2s  ease-in-out
+}
+
+  @keyframes logoAnime {
+    0% {
+    left: 15px;
+    }
+    10%{
+top:-10px
+    }
+    20%{
+        top:0px
+            }
+    100% {
+      left: 2900px;
+    }
+  }

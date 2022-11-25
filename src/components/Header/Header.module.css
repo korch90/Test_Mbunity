@@ -1,0 +1,35 @@
+.header {
+    width: 100%;
+    min-height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+}
+
+.header_light {
+    background-color: rgb(250, 248, 248);
+    color:black
+}
+
+.header_light a {
+    color: black;
+    
+}
+
+.header_dark {
+    background: rgb(8, 8, 8);
+    color:white
+}
+
+.header_dark a {
+    color: white;
+}
+/* .header_dark p {
+    color: white;
+} */
+
+a.active {
+    color: orange;
+    text-decoration: underline
+}
