@@ -24,7 +24,7 @@ const Wrapper=()=>{
      
           
 <Header/>
-
+<Home />
 <Routes>
 <Route path={AppRoutes.CV} element={<CV />} />
 <Route path={AppRoutes.CV_Admin} element={<CVAdmin />} />
