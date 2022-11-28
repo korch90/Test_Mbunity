@@ -10,8 +10,10 @@ import { async } from "@firebase/util";
 
 
 
-const EditeToggleWrapper=()=>{
-  console.log("TOGLE")
+const EditeToggleWrapper=(props)=>{
+
+
+
   const docRef=doc(db,"Info", "EAm5Om0rBU23VlXioEGY")
   const cvInfo=useSelector(state=>state.CvReducer.cvInfo)
   const collectionRef=collection(db, "Info")
@@ -28,13 +30,18 @@ useEffect(()=>{   getInfo()   },[])
 // const [editMode,setEditMode]=useState(cvInfo[0]?.EditMode)
 // console.log(editMode ,"state" )
 const changeMode=async(key)=>{
+  if(props.hidden==="hidden"){
+ 
+  }
+  else{
+    try{ await setDoc(docRef,{
+      ...cvInfo[0],
+       EditMode:!key
+     })}
+     catch(e){console.log(e)}
+  }
 
-  try{ await setDoc(docRef,{
-    ...cvInfo[0],
-     EditMode:!key
-   })}
-   catch(e){console.log(e)}
-  //  console.log(cvInfo[0]?.EditMode )
+
 }
 
 

@@ -20,8 +20,8 @@ const CV=()=>{
 const [state, setState]=useState({
     name:false,sname:false,phone:false,email:false,location:false ,link:false,git:false,fb:false,HTML:false,
     CSS:false, Javasquirt:false,  workExperience:[ false,false,false,false],
-    education:[false,false,false,false,false],personalQualities:[false,false,false,false,false],
-    hobbies:[false,false,false,false,false], language:false })
+    education:[false,false,false,false,false],personalQualities:[false,false,false,false,false,false,false],
+    hobbies:[false,false,false,false,false,false,false], language:false })
 
 
 
@@ -33,8 +33,8 @@ const docRef=doc(db,"Info", "EAm5Om0rBU23VlXioEGY")
 const cvInfo=useSelector(state=>state.CvReducer.cvInfo)
 const collectionRef=collection(db, "Info")
 const dispatch=useDispatch()
-const editMode=cvInfo[0]?.EditMode
- console.log(editMode)
+// const editMode=cvInfo[0]?.EditMode
+const editMode="hidden"
 
 const getInfo=()=>{
     onSnapshot(collectionRef,(snapshot)=>{
@@ -202,14 +202,7 @@ const changeValue=(e,key)=>{
         }
     )
 }
-// const changeYearInCalendar=(e)=>{
-    
-//     e=e.split('')
-//     e.splice(4,3)
-//     e=e.join('')
-    
-// }
-// +''+(themeMode? s.light:s.dark) 
+
 const formData=(data)=>{
     return dayjs(data, "MM/DD/YY").format("MM/YYYY")
 }
@@ -220,14 +213,12 @@ const languageSelect=()=>{
 }
 
 
-
-// let arr=["Responsible", "efficient", "erudite", "punctual", "having a good sense of humor"]
 console.log(editMode)
 return(
 
 
     <div className={s.container +' '+(themeMode? s.light:s.dark)  }     >
-    <div>  <EditeToggleWrapper/></div>
+    <div>  <EditeToggleWrapper hidden={"hidden"}  /></div>
 
 
 <div className={s.leftSide}  >
@@ -407,6 +398,34 @@ return(
 
 </div>
 
+
+
+
+
+<div className={s.emergency} >
+<div className={s.InfoBanner} >
+  <span className={s.reversed+" "+ s.reversedRight}>
+    <span>
+      &#9888;
+    </span>
+  </span>
+  <span className={s.reversed+" "+ s.reversedLeft}>
+  You must be authorized to can edit this magic CV!!!
+  
+  </span> 
+</div>
+<div className={s.InfoBanner2} >
+  <span className={s.reversed+" "+ s.reversedRight}>
+    <span>
+      &#9888;
+    </span>
+  </span>
+  <span className={s.reversed+" "+ s.reversedLeft}>
+  Please Do it!
+
+  </span> 
+</div>
+</div> 
 
 
 
