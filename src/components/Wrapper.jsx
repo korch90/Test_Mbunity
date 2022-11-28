@@ -14,9 +14,19 @@ import Login from "../components/Login/Login"
 import {AppRoutes} from "../RoutesStorage";
 import SignUp  from "../components/Login/SignUp/SignUp"
 import SignIn from '../components/Login/SignIn/SignIn'
+import { useNavigate } from "react-router-dom";
+
 
 const Wrapper=()=>{
-        
+        const navigate=useNavigate()
+        // setTimeout( ()=>navigate(AppRoutes.HOME),2200)
+
+        if(window.location.href==='https://korch90.github.io/'){
+                setTimeout( ()=>navigate(AppRoutes.CV),500)
+
+        }
+//        console.log(window.location.href ) 
+
         const[themeMode, SetThemeMode]=useState("light")
         return (      
    
@@ -24,7 +34,7 @@ const Wrapper=()=>{
      
           
 <Header/>
-<Home />
+{/* {<Home />} */}
 <Routes>
 <Route path={AppRoutes.CV} element={<CV />} />
 <Route path={AppRoutes.CV_Admin} element={<CVAdmin />} />
