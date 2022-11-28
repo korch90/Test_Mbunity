@@ -1,7 +1,7 @@
 .container{
   background-color: rgb(236, 230, 230);
-  /* min-width: 940px; */
-  height: 900px;
+   max-width: 940px; 
+  min-height: 900px;
   display: flex;
   flex-direction: row;
   border-radius: 23px;
@@ -14,13 +14,19 @@
  /* z-index: 2; */
  overflow: hidden;
 
- 
+
+
 
 }
+
+
+.name{
+  padding-top: 30px;
+ }
 .leftSide{
   /* position: absolute; */
   /* min-width: 300px; */
-  height: 860px;
+  min-height: 860px;
   background-color: rgb(59, 53, 64);
   margin-top: 40px;
   border-radius: 0  20px 0 0;
@@ -28,8 +34,10 @@
   flex-direction: column;
   padding: 20px;
   box-sizing: border-box;
-  justify-content: space-around;
 
+min-width: 280px;
+max-width: 280px;
+justify-content: start
   
   
 }
@@ -60,9 +68,11 @@
  background-image: url(../../image/2222.png);
  background-position: center;
  background-size: cover;
+
 }
 
 .Contacts{
+  padding-top: 30px;
   display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -72,15 +82,19 @@ justify-content: space-between;
 margin-top: 10px;
 }
 
-a{
+.container a{
   color: white;
+}
+.WorkSkills{
+  padding-top: 70px;
 }
 .WorkSkillsImg{
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 box-sizing: border-box;
-color:white
+color:white;
+
 }
 h3{
 color: gold;
@@ -196,12 +210,19 @@ border-radius: 50%;
 
 
   }
+  .parent a{
+    color: white!important
+  }
+  /* .btnStandart{
+
+  } */
+  
   .btn{
     /* visibility:hidden; */
    position: absolute;
    top:0px;
    right:0px;
-   
+   background-color: rgb(80, 158, 247);
   }
   .parent{
     position: relative;
@@ -240,13 +261,7 @@ border-radius: 50%;
 .timeContainerTwoCalendars input {
 width: 100%;
 }
-/* .timeContainerTwoCalendars button {
-position: absolute ;
-
-left:10px
-  } */
   .workExpSectionWrapper{
-    /* background-color: rgb(105, 44, 44); */
     position: relative;
   }
   .rightSideSection{
@@ -258,24 +273,35 @@ left:10px
    right:0px;
    z-index: 4;
    padding: 0 14px 0 13px;
-
+   background-color: rgb(80, 158, 247);
   }
+  .btn2:hover{
+    color:red
+      }
   .btn4{
  position: absolute;
    position: absolute;
    top:-12px;
    right:0px;
    z-index: 4;
+   background-color: rgb(116, 234, 95);
+  
    
   }
+  .btn4:hover{
+    color:red
+      }
   .btn3{
- 
  position: absolute;
+ background-color: gold;
    left:45%; 
    z-index: 4;
-   bottom: -23px;
+   bottom: -20px;
   }
-
+  .btn3:hover{
+ 
+   color:red
+     }
 
   .light {
     background-color: rgb(250, 248, 248);
@@ -295,7 +321,88 @@ left:10px
     color: white;
 }
 
-/* a.active {
-    color: orange;
-    text-decoration: underline
+.btn5{
+  z-index: 4;
+  background-color: rgb(80, 158, 247);
+
+ }
+
+ .btn6{
+  z-index: 4;
+  /* padding: 0; */
+  margin-left: 6px;
+  background: rgb(39, 213, 39);
+ }
+
+ .btn7{
+  z-index: 4;
+  height:20px;
+  margin-top: 17px;
+  margin-left: 20px;
+  background-color: gold;
+ }
+ 
+ .rightSideSection{
+  position: relative;
+}
+.hobbiesSectionWrapper{
+  display: flex;
+  flex-direction: row;
+  height: 25px;
+}
+
+.rightSideSectionHobbies{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.hobbieItem{
+  padding-top: 10px;
+  margin: 4px;
+}
+.textWrapper{
+margin-top: -18px;
+padding-right:10px;
+}
+
+/* .visible:hover{
+  color:red
 } */
+.visible{
+border-radius: 4px;
+display: block;
+
+}
+.hidden{
+  border-radius: 4px;
+display: none;
+  }
+.personalQualitiesItems{
+
+  height: 30px;
+}
+.personaItemsKeepSameHeight{
+  height: 61px;
+  box-sizing: border-box;
+  margin-top:21px ;
+} 
+/* input{
+  height: 50px;
+}  */
+.languageSection{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.languageSection p{
+padding-right: 10px;
+}
+.btn8{
+  position: absolute;
+  z-index: 4;
+  /* padding: 0; */
+  /* margin-left: 6px; */
+  background: rgb(39, 213, 39);
+  right: 1px;
+  width: 50px;
+}

@@ -12,8 +12,8 @@ const Login = () => {
 return(
 
 <div className={s.container} >
-  <button className={s.buttonSignIn} > <NavLink to="/Login/SignUp"> SignUp </NavLink> </button>
-  <button className={s.buttonSignUp}> <NavLink to="/Login/SignIn"> SignIn </NavLink></button>
+  <button className={s.buttonSignIn} > <NavLink to="/Login/SignUp"> Sign Up </NavLink> </button>
+  <button className={s.buttonSignUp}> <NavLink to="/Login/SignIn"> Sign In </NavLink></button>
 </div>
 )
 }

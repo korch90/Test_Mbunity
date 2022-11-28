@@ -1,6 +1,6 @@
 import s from "../Header/Header.module.css"
 import { NavLink } from "react-router-dom";
-import ThemeToggleWrapper from "../ThemeToggleWrapper/ThemeToggleWrapper"
+import ThemeToggleWrapper from "../Toggles/ThemeToggleWrapper"
 import ThemeContext from "../Context"
 import { useContext, useEffect, useState } from "react";
 import Logo from "../Logo/Logo";

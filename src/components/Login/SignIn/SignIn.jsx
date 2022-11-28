@@ -1,23 +1,19 @@
 
-import axios from "axios";
 import React from "react";
 import { useState , useEffect} from "react";
 import {auth} from "../../../firebase"
 import {signInWithEmailAndPassword} from "firebase/auth"
-
 import { BadLogin } from "../BadLogin/BadLogin";
 import { useNavigate } from "react-router-dom";
 import { AppRoutes } from "../../../RoutesStorage.jsx";
-import db from "../../../firebase"
-import { collection ,addDoc, onSnapshot } from 'firebase/firestore';
-import { async } from "@firebase/util";
+
 import s from "./SignIn.module.scss"
 const SignIn = () => {
    
    
     const[badLogin, setBadLogin]=useState({boolean:false, text:""})
-    const [color, setColor]=useState("red")
-    const [users, setUsers]=useState([])
+    const [color, setColor]=useState("gold")
+
 
         const [formValue, setFormValue] = useState({
             email: "",

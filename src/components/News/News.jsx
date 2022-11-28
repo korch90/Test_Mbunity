@@ -1,15 +1,10 @@
-// import { compose } from "@reduxjs/toolkit";
 import axios from "axios";
 import React from "react";
 import { useState , useEffect} from "react";
-// import { useEffect } from "react";
-// import { useState, useContext } from "react";
-// import ThemeContext from "./Context";
 import s from "../News/News.module.css"
 import { useContext } from "react";
 import ThemeContext from "../Context"
 import Preloader from "../Preloader/Preloader";
-// import { Link } from "react-router-dom";
 
 const News = () => {
 

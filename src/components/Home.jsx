@@ -12,10 +12,38 @@ const Home=()=>{
 
 {log&&log==="korch90@gmail.com"? <CV_Admin/> :log?<CV/>:
 
-<div className={s.container} ><p>You must be authorized to see this magic CV</p>  <p>Please Do it!</p> </div>
+
+<>
+<div className={s.InfoBanner} >
+  <span className={s.reversed+" "+ s.reversedRight}>
+    <span>
+      &#9888;
+    </span>
+  </span>
+  <span className={s.reversed+" "+ s.reversedLeft}>
+  You must be authorized to see this magic CV!!!
+  
+  </span> 
+</div>
+<div className={s.InfoBanner2} >
+  <span className={s.reversed+" "+ s.reversedRight}>
+    <span>
+      &#9888;
+    </span>
+  </span>
+  <span className={s.reversed+" "+ s.reversedLeft}>
+  Please Do it!
+
+  </span> 
+</div>
+</> 
+
 }
+{/* <div className={s.container} ><p>You must be authorized to see this magic CV</p>  <p>Please Do it!</p> </div> */}
+
 
 </div>
+
     )
 }
 export default Home
