@@ -5,11 +5,15 @@ import s from "./Home.module.scss"
 
 const Home=()=>{
     const log=localStorage.getItem("userEmail")
+    // if (log==null){
+    //     log=undefined
+    // }
     console.log(log)
+    // console.log(null==false)
     return(
         
 <div   >
-
+sdcsd
 {log&&log==="korch90@gmail.com"? <CV_Admin/> :log?<CV/>:
 
 
