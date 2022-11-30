@@ -1,10 +1,11 @@
-import s from "../CV/CV.module.css"
+import s from "../CV/CV_Admin.module.css"
  import { useDispatch, useSelector } from "react-redux";
  import {CVReducerActions} from "../redux/action/actionsCVReducer.js"
  import ThemeContext from "../Context.jsx"
  import { useState , useEffect, useContext} from "react";
- import db from "../../firebase"
+ import db, { storage } from "../../firebase"
  import { collection ,addDoc, onSnapshot, deleteDoc, doc, setDoc} from 'firebase/firestore';
+ import { getDownloadURL, ref,uploadBytesResumable} from 'firebase/storage';
  import { async } from "@firebase/util";
 import TimePickerSection from "../TimePickerSection"
 import dayjs from 'dayjs';
@@ -34,7 +35,7 @@ const cvInfo=useSelector(state=>state.CvReducer.cvInfo)
 const collectionRef=collection(db, "Info")
 const dispatch=useDispatch()
 const editMode=cvInfo[0]?.EditMode
- console.log(editMode)
+//  console.log(editMode)
 
 const getInfo=()=>{
     onSnapshot(collectionRef,(snapshot)=>{
@@ -150,7 +151,7 @@ const editInfo= async(e,editValue)=>{
 }
 const editInfoRange= async(name,resForRange)=>{
 
-    const docRef=doc(db,"Info", "EAm5Om0rBU23VlXioEGY")
+    // const docRef=doc(db,"Info", "EAm5Om0rBU23VlXioEGY")
        try{ await setDoc(docRef,{
         ...cvInfo[0],
         [name]:resForRange
@@ -219,10 +220,41 @@ const languageSelect=()=>{
     setState(prev=>({...prev, language:true}))
 }
 
+const handleUploadPhoto=(e)=>{
+    console.log(2)
 
+const storageRef= ref (storage,  `/images/${e.target.files[0].name}`)
+console.log(e.target.files[0].name)
+const uploadData = uploadBytesResumable(storageRef,e.target.files[0])
+uploadData.on("state_changed",(snapshot)=>{
+    const prog= ((snapshot.bytesTransferred /snapshot.totalBytes)*100)
+    console.log(prog)
+}, 
+ (err)=>console.log(err),
 
+ ()=>{
+    getDownloadURL(uploadData.snapshot.ref)
+    .then((url)=> addUrl(url))
+})
+
+}
+
+const addUrl=async (url)=>{
+    console.log(docRef)
+    console.log(url)
+    try{ await setDoc(docRef,{
+        
+        ...cvInfo[0],
+        url:url
+       })}
+       catch(e){console.log(e)}
+}
 // let arr=["Responsible", "efficient", "erudite", "punctual", "having a good sense of humor"]
-console.log(editMode)
+ console.log(cvInfo[0]?.url)
+
+
+
+
 return(
 
 
@@ -232,8 +264,11 @@ return(
 
 <div className={s.leftSide}  >
 <div className={s.bigRound} ></div>
-<div  className={s.ava  }  >
+<div  className={s.ava  } style={{backgroundImage:  "url(" + cvInfo[0]?.url + ")"}}  >
 
+
+
+<input type="file"  className={ (editMode? s.hidden:s.visible)}  onChange={ (e)=>handleUploadPhoto(e)} /> 
 </div>
 <div className={s.name}>
 <div className={s.parent} >

@@ -223,7 +223,7 @@ return(
 
 <div className={s.leftSide}  >
 <div className={s.bigRound} ></div>
-<div  className={s.ava  }  >
+<div  className={s.ava  } style={{backgroundImage:  "url(" + cvInfo[0]?.url + ")"}}  >
 
 </div>
 <div className={s.name}>

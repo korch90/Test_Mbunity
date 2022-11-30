@@ -61,7 +61,7 @@ justify-content: start
  /* position: absolute; */
  z-index: 2;
  margin: 0px auto;
- background-image: url(../../image/2222.png);
+ /* background-image: url(../../image/2222.png); */
  background-position: center;
  background-size: cover;
 

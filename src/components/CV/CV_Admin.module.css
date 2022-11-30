@@ -19,7 +19,9 @@
 
 }
 
-
+input[type='file'] {
+  color: transparent;
+}
 .name{
   padding-top: 30px;
  }
@@ -65,7 +67,7 @@ justify-content: start
  /* position: absolute; */
  z-index: 2;
  margin: 0px auto;
- background-image: url(../../image/2222.png);
+ /* background-image: url(https://firebasestorage.googleapis.com/v0/b/andriankukr.appspot.com/o/images%2F1212.png?alt=media&token=af2417a3-6115-4872-9caf-8c85c0d9d071); */
  background-position: center;
  background-size: cover;
 
