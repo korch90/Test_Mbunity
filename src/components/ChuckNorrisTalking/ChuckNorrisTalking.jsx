@@ -1,29 +1,26 @@
  import s from "./ChuckNorrisTalking.module.css"
-import { Routes,Route, NavLink } from "react-router-dom";
+// import { Routes,Route, NavLink } from "react-router-dom";
 // import ThemeContext from "../Context"
 // import { useContext } from "react";
 import React, { Component }  from 'react';
-
-import Login from "../Login/Login"
+import Users from "./Users/Users";
+import Chat from "./Chat/Chat";
 
 
 const ChuckNorrisTalking=()=>{
     
     return(
-        <div className={s.wrapper}  >f
-<div className={s.div1} >d
-    <div className={s.div2} >s</div><div className={s.div3} >3</div>
-</div>
-        <br />
-        ChuckNorrisTalking
-        <Routes>
+        <div className={s.wrapper}  >
+<Users/>
+<Chat/>
 
 
-
-
-</Routes>
 </div>
     )
 }
 
 export default ChuckNorrisTalking
+
+{/* <Routes>
+ <Route path={AppRoutes.CV} element={<CV />} />
+</Routes> */}

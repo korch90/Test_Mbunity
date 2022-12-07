@@ -28,7 +28,7 @@ box-sizing: border-box;
     box-sizing: border-box; 
 
 }
-li{
+.wrapper >li{
  width: 300px;
   height: 300px;
     padding: 5px;

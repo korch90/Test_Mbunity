@@ -13,7 +13,7 @@ import {useState , useEffect} from "react";
 import db from "../firebase"
 import { collection ,addDoc, onSnapshot, deleteDoc, doc, setDoc} from 'firebase/firestore';
 import { async } from "@firebase/util";
-import {ActionTimeReducer} from "./redux/action/actionsTimeReducer"
+import {ActionTimeReducer} from "./redux/action/ActionChatTimeReducer"
 
 
 export default function ResponsiveDatePickers(props) {

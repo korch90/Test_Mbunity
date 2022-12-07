@@ -10,7 +10,7 @@ import { async } from "@firebase/util";
 
 
 
-const EditeToggleWrapper=(props)=>{
+const EditToggleWrapper=(props)=>{ 
 
 
 
@@ -27,8 +27,7 @@ const EditeToggleWrapper=(props)=>{
 } 
 
 useEffect(()=>{   getInfo()   },[])
-// const [editMode,setEditMode]=useState(cvInfo[0]?.EditMode)
-// console.log(editMode ,"state" )
+
 const changeMode=async(key)=>{
   if(props.hidden==="hidden"){
  
@@ -61,4 +60,4 @@ return(
 }
 
 
-export default EditeToggleWrapper
+export default EditToggleWrapper

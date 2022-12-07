@@ -14,3 +14,7 @@ export const TimeReducer={
   GET_TIME:"GET_TIME",
  
 }
+export const ChatReducerTypes={
+  GET_INFO:"GET_INFO",
+  PUSH_MESSAGE:"PUSH_MESSAGE"
+}

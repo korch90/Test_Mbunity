@@ -8,7 +8,7 @@ import s from "../CV/CV.module.css"
  import { async } from "@firebase/util";
 import TimePickerSection from "../TimePickerSection"
 import dayjs from 'dayjs';
-import EditeToggleWrapper from "../Toggles/EditeToggleWrapper"
+import EditToggleWrapper from "../Toggles/EditeToggleWrapper"
 import BasicSelect from "../Select/Select.js"
 
 const CV=()=>{
@@ -218,7 +218,7 @@ return(
 
 
     <div className={s.container +' '+(themeMode? s.light:s.dark)  }     >
-    <div>  <EditeToggleWrapper hidden={"hidden"}  /></div>
+    <div>  <EditToggleWrapper hidden={"hidden"}  /></div>
 
 
 <div className={s.leftSide}  >
@@ -410,7 +410,7 @@ return(
     </span>
   </span>
   <span className={s.reversed+" "+ s.reversedLeft}>
-  You must be authorized to can edit this magic CV!!!
+  You must be authorized to have an ability to edit this magic CV!!!
   
   </span> 
 </div>

@@ -3,7 +3,7 @@ import {CvReducerTypes} from "./actionTypes"
 const initialState = {
 
     cvInfo:{}
-}
+} 
 
 
 const CVReducer = (state= initialState, action) => { //Reducer function

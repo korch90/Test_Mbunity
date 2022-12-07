@@ -5,12 +5,12 @@ import thunk from "redux-thunk";
 
 import AndrianReducer from "./reducers/AndrianReducer";
 import CvReducer from "./reducers/CVReducer";
-import TimeReducer from "./reducers/TimeReducer"
+import CHAT_Reducer from "./reducers/CHATReducer"
 
 const rootReducer = combineReducers({
   AndrianReducer,
   CvReducer,
-  TimeReducer
+  CHAT_Reducer
  
 });
 

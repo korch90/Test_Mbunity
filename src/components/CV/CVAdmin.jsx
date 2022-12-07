@@ -9,7 +9,7 @@ import s from "../CV/CV_Admin.module.css"
  import { async } from "@firebase/util";
 import TimePickerSection from "../TimePickerSection"
 import dayjs from 'dayjs';
-import EditeToggleWrapper from "../Toggles/EditeToggleWrapper"
+import EditToggleWrapper from "../Toggles/EditeToggleWrapper"
 import BasicSelect from "../Select/Select.js"
 
 const CV_Admin=()=>{
@@ -32,16 +32,15 @@ const [isTheSameElement, setIsTheSameElement]=useState('')
 
 const docRef=doc(db,"Info", "EAm5Om0rBU23VlXioEGY")
 const cvInfo=useSelector(state=>state.CvReducer.cvInfo)
-const collectionRef=collection(db, "Info")
 const dispatch=useDispatch()
+const collectionRef=collection(db, "Info")
+
 const editMode=cvInfo[0]?.EditMode
-//  console.log(editMode)
 
 const getInfo=()=>{
     onSnapshot(collectionRef,(snapshot)=>{
         dispatch(CVReducerActions.cvInfoOnInit(snapshot.docs.map(doc=>({ ...doc.data(), id:doc.id}))))
     })
- 
 } 
 useEffect(()=>{   getInfo()   },[])
 
@@ -192,8 +191,6 @@ const handleEditRightSideDeleteSection= async(index,key)=>{
        catch(e){console.log(e)}
 }
 
-
-
 const changeValue=(e,key)=>{
         setEditValue(
             prev=>({...prev, text:cvInfo[0][key]}))
@@ -203,25 +200,16 @@ const changeValue=(e,key)=>{
         }
     )
 }
-// const changeYearInCalendar=(e)=>{
-    
-//     e=e.split('')
-//     e.splice(4,3)
-//     e=e.join('')
-    
-// }
-// +''+(themeMode? s.light:s.dark) 
+
 const formData=(data)=>{
     return dayjs(data, "MM/DD/YY").format("MM/YYYY")
 }
 
 const languageSelect=()=>{
-    console.log(444)
     setState(prev=>({...prev, language:true}))
 }
 
 const handleUploadPhoto=(e)=>{
-    console.log(2)
 
 const storageRef= ref (storage,  `/images/${e.target.files[0].name}`)
 console.log(e.target.files[0].name)
@@ -250,16 +238,13 @@ const addUrl=async (url)=>{
        catch(e){console.log(e)}
 }
 // let arr=["Responsible", "efficient", "erudite", "punctual", "having a good sense of humor"]
- console.log(cvInfo[0]?.url)
-
 
 
 
 return(
 
-
     <div className={s.container +' '+(themeMode? s.light:s.dark)  }     >
-    <div>  <EditeToggleWrapper/></div>
+    <div>  <EditToggleWrapper/></div>
 
 
 <div className={s.leftSide}  >
@@ -438,11 +423,7 @@ return(
 
 
 
-
-
 </div>
-
-
 
 
     </div> 
