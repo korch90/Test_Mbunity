@@ -4,8 +4,7 @@ height: 500px;
   margin: 50px auto;
 background-color: rgb(227, 206, 206);
 
- 
-}
+
 img{
   width: 200px;
   height: 200px;
@@ -14,3 +13,6 @@ img{
   margin: 0;
   padding: 0;
 } */
+* {
+  margin: 0;
+}

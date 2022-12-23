@@ -18,7 +18,9 @@
 
 
 }
-
+h4{
+  margin:16px 2px 16px 0px;
+}
 input[type='file'] {
   color: transparent;
 }
@@ -43,6 +45,10 @@ justify-content: start
   
   
 }
+/* .leftSide>p{
+margin: 10px;
+} */
+
 
 .bigRound{
   width: 220px;
