@@ -10,7 +10,9 @@ const Test=()=>{
 
 
 
-
+const fff=()=>{
+    console.log(3)
+}
         const options = {
             method: 'GET',
             url: 'https://bing-news-search1.p.rapidapi.com/news/trendingtopics',
@@ -29,7 +31,10 @@ const Test=()=>{
       });
 return(
     <div className={s.wrapper} >
-    Test
+    Test    
+
+ <div ></div>
+<button onClick={()=>fff()} ></button>
 
     </div>
 )

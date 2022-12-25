@@ -16,7 +16,7 @@ const initialState = {
 id:2,
 message:[
   {
-    url:"https://upload.wikimedia.org/wikipedia/commons/3/30/Chuck_Norris_May_2015.jpg",
+    url:"https://media.istockphoto.com/id/1346143621/photo/positive-young-mixed-race-woman-using-a-laptop-and-smartphone-at-home-cozy-home-interior-with.jpg?b=1&s=170667a&w=0&k=20&c=0TTNlEd_fztBqD6lViOMi2tvhT8Pwj8QQJW_7SQwgSc=",
         messageToFrom:"from",
         time:"22/11/2020",
         text:"helloAndrian",
@@ -56,7 +56,7 @@ message:[
     {   name:"Kat",
     sname:"Ovivka",
     id:2,
-    url:"https://upload.wikimedia.org/wikipedia/commons/3/30/Chuck_Norris_May_2015.jpg",
+    url:"https://media.istockphoto.com/id/1346143621/photo/positive-young-mixed-race-woman-using-a-laptop-and-smartphone-at-home-cozy-home-interior-with.jpg?b=1&s=170667a&w=0&k=20&c=0TTNlEd_fztBqD6lViOMi2tvhT8Pwj8QQJW_7SQwgSc=",
     messageWith:[
         
           
@@ -95,7 +95,7 @@ messageWith:[
 id:1,
 message:[
 {
-url:"https://upload.wikimedia.org/wikipedia/commons/3/30/Chuck_Norris_May_2015.jpg",
+url:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fzoomwiki.ru%2Fdrugoe%2Favatarki-dlya-zuma%2F&psig=AOvVaw3luc2F8UMwR7xMgol0Vhpc&ust=1672057506440000&source=images&cd=vfe&ved=2ahUKEwizif_e4ZT8AhVAQ_EDHZy4DKIQjRx6BAgAEAo",
 messageToFrom:"from",
 time:"22/11/2020",
 text:"helloAndrianys",
