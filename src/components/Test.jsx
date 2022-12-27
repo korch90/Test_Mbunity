@@ -9,6 +9,15 @@ import s from "../components/Test.module.css"
 const Test=()=>{
 
 
+const LeazyComponent=React.lazy(
+    ()=>
+new Promise(resolve=>{
+    setTimeout(()=>{
+        resolve(import("./LeazyComponent"))
+    },3000)
+})
+)
+
 
 const fff=()=>{
     console.log(3)
@@ -36,6 +45,15 @@ return(
  <div ></div>
 <button onClick={()=>fff()} ></button>
 
+<div className={s.mainDiv} > 
+<div className={s.divka} > 
+<div  className={s.divka2}></div>
+
+</div>
+</div>
+<React.Suspense fallback={<p>loading...</p>}>
+    <LeazyComponent/>
+</React.Suspense>
     </div>
 )
 }

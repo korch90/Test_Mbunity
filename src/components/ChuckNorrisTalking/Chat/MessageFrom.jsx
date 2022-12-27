@@ -4,7 +4,7 @@
 
 
 const MessageFrom=(props)=>{
-console.log(props)
+
 
 
 

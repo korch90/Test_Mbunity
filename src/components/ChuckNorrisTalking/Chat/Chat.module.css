@@ -3,6 +3,8 @@
     display: grid;
     grid-template-rows: 1fr 10fr;
     position: relative;
+height: 500px; 
+
 }
 
 .head {
@@ -14,6 +16,8 @@
 
 .mainSection {
     background-color: #fff;
+overflow: scroll;
+
 }
 
 .bottomSection {
@@ -43,15 +47,16 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 100%;
+
     margin: 0;
     padding: 0;
+
 }
 
 .mainSection>ul>li {
     /* background-color: rgb(52, 118, 103); */
     width: 100%;
-    min-height: 15px;
+    min-height: 25px;
     padding: 0;
     margin-bottom: 1px;
     margin-left: 0;
@@ -60,6 +65,8 @@
     align-items: center;
     padding: 0 6px 0 6px;
     height: fit-content;
+
+
 }
 
 

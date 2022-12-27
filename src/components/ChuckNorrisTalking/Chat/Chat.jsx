@@ -21,10 +21,16 @@ const pushMessageThunk=(chatStore)=>dispatch(_pushMessage(chatStore))
 const [wichMessageEdit,setWichMessageEdit]=useState(0)
 const [messageValue,setMessageValue]=useState("")
 
+const ulRef = React.createRef()
 
-// useEffect(()=>{
-//  dispatch(ActionChatReducer.chatOnInit(chatStore))
-// },[])
+
+useEffect(()=>{
+    ulRef.current.scrollIntoView({block: "end", behavior: "smooth"});
+},[chatStore,messageValue ])
+
+
+
+
 const options = {
     method: 'GET',
     headers: {
@@ -37,6 +43,7 @@ const options = {
 const time=new Date().getHours() + ":" + new Date().getMinutes()+ ":" + new Date().getSeconds()
 
 const chuckNorisAnswer = () => {
+  
     let newChatStore = JSON.parse(JSON.stringify(chatStore))
     console.log("old", newChatStore)
     fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random', options)
@@ -54,7 +61,7 @@ const chuckNorisAnswer = () => {
 
                 // console.log(newChatStore)
                 pushMessageThunk(newChatStore)
-
+                
 
             }
 
@@ -62,7 +69,7 @@ const chuckNorisAnswer = () => {
 
         .catch(err => console.error(err));
 
-
+ 
 }
 
 
@@ -102,9 +109,22 @@ const handleSendMessage = () => {
 
     }
     setMessageValue("")
+
+    // ulRef.current.scrollIntoView() 
+     ulRef.current.scrollIntoView({block: "end", behavior: "smooth"});
 }
 
 const userChat=chatStore?.users?.filter( el=>el.id===1 )[0].messageWith .filter(el=>el.id===chatStore.chatWith)[0].message
+
+
+
+
+
+
+
+
+
+
 
 
     return(
@@ -115,7 +135,7 @@ const userChat=chatStore?.users?.filter( el=>el.id===1 )[0].messageWith .filter(
 </div>
 <div className={s.mainSection} >
 
-<ul >
+<ul ref={ulRef} >
 {userChat?.map(
     (el,index)=> <li className={el.messageToFrom==="to"?s.to:s.from  } key={shortid.generate()} >
      <div className={s.message} >
@@ -135,6 +155,8 @@ const userChat=chatStore?.users?.filter( el=>el.id===1 )[0].messageWith .filter(
 </div>
 </div>
     )
+
+
 }
 
 export default Chat
