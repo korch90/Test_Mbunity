@@ -1,11 +1,11 @@
 .wrapper{
    
-    background-color: rgb(51, 159, 85);
+    background-color: #555555;
     display: grid;
     grid-template-rows: 1fr 20fr;
 } 
 .search{
-    background-color: rgb(111, 208, 63);
+    background-color: #555555;
     display: flex;
     justify-content: center;
     align-items:flex-end;

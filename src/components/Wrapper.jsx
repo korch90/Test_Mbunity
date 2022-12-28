@@ -20,9 +20,9 @@ import { useNavigate } from "react-router-dom";
 const Wrapper=()=>{
         const navigate=useNavigate()
 
-        if(window.location.href==='https://korch90.github.io/CV_ANDRIAN_KORCHYNSKIY.github.io/'){
-                setTimeout( ()=>navigate(AppRoutes.CV),500)
-        }
+        // if(window.location.href==='https://korch90.github.io/CV_ANDRIAN_KORCHYNSKIY.github.io/'){
+        //         setTimeout( ()=>navigate(AppRoutes.CV),500)
+        // }
 
 
         const[themeMode, SetThemeMode]=useState("light")

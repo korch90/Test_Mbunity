@@ -1,5 +1,5 @@
 .wrapper {
-    background-color: rgb(236, 117, 117);
+    background-color:  #555555;
     display: grid;
     grid-template-rows: 1fr 10fr;
     position: relative;
