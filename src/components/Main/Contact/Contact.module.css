@@ -1,0 +1,515 @@
+.contact_main_text {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  color: #000000;
+  text-align: center;
+  margin: 51.54px auto;
+}
+.contact_main_text > p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  padding-top: 10px;
+  text-align: center;
+  color: #717171;
+}
+
+.contact_container {
+  min-height: 667px;
+  max-width: 1196px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 50px;
+  background-color: #fff;
+}
+.contact_black_box {
+  width: 42%;
+  height: 647px;
+  background: #000000;
+  border-radius: 10px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 10px; */
+  position: relative;
+  overflow: hidden;
+  justify-content: space-between;
+}
+.contact_black_box a:hover {
+  cursor: pointer;
+}
+
+.contact_black_box_top {
+  height: 33%;
+  text-align: start;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  color: #ffffff;
+  padding-left: 40px;
+  padding-top: 40px;
+}
+.contact_black_box_top > p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.contact_black_box_center {
+  height: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact_black_box_center_info {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+.contact_black_box_center_info > a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  padding-left: 25px;
+  width: 288px;
+  text-align: start;
+}
+
+.contact_img {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.1s;
+  font-size: 24px;
+  color: white;
+}
+.contact_img:hover {
+  color: black;
+  background-color: #fff;
+}
+.contact_black_box_bottom {
+  display: flex;
+  height: 33%;
+  align-items: flex-end;
+  padding-bottom: 39px;
+  margin-left: 40px;
+  /* justify-content: start; */
+}
+
+.contact_black_box_bottom_img {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.1s;
+  font-size: 26px;
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+  z-index: 200;
+}
+.contact_black_box_bottom_img:hover {
+  cursor: pointer;
+  z-index: 200;
+  color: black;
+  background-color: #fff;
+}
+
+.big_round {
+  background-image: url(../../../images/bigRound.svg);
+  position: absolute;
+  width: 269px;
+  height: 269px;
+  bottom: 0;
+  right: 0;
+  background-position-x: 100px;
+  background-position-y: 100px;
+  background-repeat: no-repeat;
+  z-index: 0.2;
+}
+
+.small_round {
+  background-image: url(../../../images/smallRound.svg);
+  position: absolute;
+  width: 269px;
+  height: 269px;
+  bottom: 0;
+  right: 0;
+  background-position-x: 70px;
+  background-position-y: 70px;
+  background-repeat: no-repeat;
+}
+
+.contact_white_box {
+  max-width: 705px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 59%;
+  background-color: #fff;
+}
+.contact_white_box input {
+  cursor: pointer;
+}
+.contact_white_box button {
+  cursor: pointer;
+}
+
+.contact_white_box_input_forms {
+  height: 33%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 40px;
+}
+.contact_white_box_input_forms > label > input {
+  font-size: 12px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #8d8d8d;
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 278px;
+  padding: 0;
+}
+.contact_white_box_input_forms > label > input:focus {
+  cursor: pointer;
+  color: #000000;
+  outline: none;
+}
+.contact_white_box_input_forms > label > input:hover {
+  cursor: pointer;
+}
+
+.contact_white_box_input_forms > label > input:not(:placeholder-shown) {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.contact_white_box_input_forms > label:has(input:not(:placeholder-shown)) {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+.contact_white_box_input_forms > label {
+  width: 278px;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #8d8d8d;
+  margin-bottom: 45px;
+}
+.contact_white_box_select_subject {
+  height: 33%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+}
+
+.contact_white_box_select_subject > fieldset {
+  position: relative;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 40px;
+  border: none;
+  width: 500px;
+}
+.contact_white_box_select_subject > fieldset > legend {
+  position: absolute;
+  top: 1px;
+}
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  background-image: url(../../../images/gray.svg);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 0 0 0;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  width: 115px;
+  height: 14px;
+}
+
+input[type="radio"]:checked + label {
+  background-image: url(../../../images/teenyicons_tick-circle-solid.svg);
+}
+
+.contact_white_box_select_subject_radio {
+  display: flex;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.message {
+  position: relative;
+  text-align: left;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  height: 56px;
+  color: #8d8d8d;
+  margin-top: 45px;
+}
+
+.message > label {
+  font-size: 12px;
+  line-height: 20px;
+}
+.message > label > input {
+  width: 100%;
+  margin-top: 15px;
+  margin: 0px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  font-size: 14px;
+  line-height: 20px;
+  height: 30px;
+  color: #8d8d8d;
+}
+.message > label > input:focus {
+  cursor: pointer;
+  color: #000000;
+  outline: none;
+}
+
+.contact_white_box_bottom {
+  height: 220px;
+  position: relative;
+  padding-top: 80px;
+  background-color: #fff;
+}
+.contact_white_box_bottom > button {
+  background-color: black;
+  color: white;
+  position: absolute;
+  width: 214px;
+  height: 54px;
+  right: 50px;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+.contact_white_box_bottom > div {
+  background-image: url(../../../images//letter_send\ 1.svg);
+  width: 240.79px;
+  height: 140.31px;
+  position: absolute;
+  top: 92px;
+  right: 140px;
+}
+
+@media screen and (max-width: 870px) {
+  .contact_main_text > p {
+    display: none;
+  }
+  .contact_main_text {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+    margin: 0 auto;
+  }
+  .contact_container {
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 1049px;
+  }
+  .contact_black_box {
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .small_round {
+    width: 54px;
+    height: 54px;
+    background-position-x: 0px;
+    background-position-y: 0px;
+    bottom: 25px;
+    right: 25px;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+  }
+  .big_round {
+    width: 192px;
+    height: 192px;
+  }
+  .contact_black_box_top {
+    text-align: center;
+    padding: 0px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact_black_box_top > h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .contact_black_box_top > p {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .contact_black_box_center {
+    height: 204px;
+    text-align: center;
+    padding-top: 10px;
+    width: 100%;
+  }
+  .contact_black_box_center_info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+  .contact_black_box_center_info > a {
+    text-align: center;
+    padding: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    width: 100%;
+  }
+  .contact_black_box_bottom {
+    width: 120px;
+    height: 100px;
+    margin: auto;
+    align-items: center;
+    padding: 0;
+    z-index: 1;
+  }
+  .contact_white_box {
+    max-width: 1200px;
+    width: 100%;
+  }
+  .contact_white_box_select_subject {
+    padding-top: 50px;
+  }
+  .contact_white_box_select_subject > fieldset {
+    width: 300px;
+    padding-left: 0;
+  }
+  .contact_white_box_select_subject_radio label {
+    margin-bottom: 10px;
+  }
+  .message {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .contact_white_box_input_forms {
+    padding-left: 40px;
+    margin: 0;
+    padding-top: 20px;
+  }
+  .message > label > input {
+    margin: 0;
+  }
+  .contact_white_box_input_forms > label {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact_white_box {
+    height: 631px;
+  }
+  .contact_white_box_input_forms {
+    margin-top: 20px;
+  }
+  .contact_white_box_input_forms label {
+    margin-top: 5px;
+  }
+  .contact_white_box_input_forms > label input {
+    padding-top: 10px;
+    width: 250px;
+  }
+  .contact_white_box_select_subject {
+    margin-top: 40px;
+  }
+  .message {
+    margin: 0px;
+    padding: 0px;
+  }
+  .contact_white_box_bottom > button {
+    font-size: 12.9495px;
+    line-height: 19px;
+    width: 90%;
+    position: relative;
+    margin: 15px auto;
+    height: 38.21px;
+    left: 0;
+  }
+  .contact_white_box_bottom {
+    padding-top: 10px;
+  }
+  .contact_white_box_bottom_img {
+    margin-top: -70px;
+  }
+}

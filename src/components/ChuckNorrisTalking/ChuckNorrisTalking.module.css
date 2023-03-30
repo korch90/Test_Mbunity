@@ -1,8 +1,0 @@
-.wrapper{
-    background-color: rgb(174, 155, 155);
-    width: 900px;
-    height: 500px;
-    margin: 50px auto;
-    display: grid;
-    grid-template-columns: 2fr 5fr;
-}

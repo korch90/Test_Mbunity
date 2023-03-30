@@ -1,0 +1,30 @@
+.logo_wrapper {
+  width: 109px;
+  height: 29px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.logo_wrapper_black {
+  color: white;
+  position: relative;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  height: 22px;
+}
+
+@media screen and (max-width: 980px) {
+  .logo_wrapper {
+    font-size: 18px;
+    line-height: 22px;
+    width: 91px;
+    height: 22px;
+  }
+}

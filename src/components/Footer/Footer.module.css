@@ -1,0 +1,188 @@
+.footer_wrapper {
+  max-width: 1440px;
+  height: 479px;
+  background-color: rgb(0, 0, 0);
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.logo_here {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 44px;
+  color: #ffffff;
+  margin: 0 auto;
+  width: 300px;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+.footer_main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.topic {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
+}
+.footer_section {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_img {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.1s;
+    font-size: 24px;
+    color: white;
+}
+.footer_img:hover{
+    color: rgb(0, 0, 0);
+    background-color:white;
+}
+.footer_section_group {
+  display: flex;
+  padding-top: 24px;
+}
+.footer_section_group > a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  width: 248px;
+}
+
+.footer_section > a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  padding-top: 24px;
+}
+.footer_section:nth-child(5) {
+  background-color: #131313;
+  width: 304px;
+  height: 184px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px 10px 10px;
+}
+.button_input_group > input::placeholder {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  color: #616161;
+}
+.button_input_group > input {
+  background-color: #1e1e1e;
+  border: none;
+  color: white;
+}
+.button_input_group > input:focus {
+  outline: none;
+}
+.button_input_group > button {
+  width: 105px;
+  height: 39px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+.button_input_group > button:hover {
+  cursor: pointer;
+}
+.footer_section > p {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+@media screen and (max-width: 1100px) {
+  .footer_wrapper {
+    height: 832px;
+  }
+  .footer_main {
+    display: block;
+    position: relative;
+  }
+
+  .footer_section:nth-child(1) {
+    align-items: flex-start;
+    padding: 0;
+  }
+  .footer_section:nth-child(2) {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 0;
+  }
+
+  .footer_section:nth-child(4) {
+    position: absolute;
+    top: 297px;
+    right: 0px;
+  }
+  .footer_section:nth-child(5) {
+    /* margin: 28px auto; */
+    margin-top: 20px;
+  }
+  .footer_section > a {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .footer_section > div > a {
+    font-size: 12px;
+    line-height: 18px;
+    width: 120px;
+  }
+  .footer_section_group > div {
+    margin-bottom: 7px;
+  }
+  .footer_section_group {
+    flex-direction: column;
+  }
+  .footer_section {
+    margin-top: 5px;
+  }
+
+  .topic {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .logo_here {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}

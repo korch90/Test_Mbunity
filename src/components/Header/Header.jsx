@@ -1,39 +1,23 @@
 import s from "../Header/Header.module.css"
-import { NavLink } from "react-router-dom";
-import ThemeToggleWrapper from "../Toggles/ThemeToggleWrapper"
-import ThemeContext from "../Context"
-import { useContext, useEffect, useState } from "react";
-import Logo from "../Logo/Logo";
-import React, { Component }  from 'react';
-
+import Logo from "../Header/Logo/Logo.jsx"
+import Nav from "../Header/Nav/Nav.jsx"
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Header=()=>{
-    const {themeMode, setThemeMode} =useContext(ThemeContext)
-    const log=localStorage.getItem("userEmail")
-    const [loginShow, setLoginshow]=useState(true)
+    const [show_burger, setShow_burger]=useState(true)
+
+const handle_burger=()=>{
+    setShow_burger(prev=>!prev)
+}
+    return(
+  
+<div  className={ show_burger?s.header_wrapper :s.header_wrapper_black }>
+<Logo show_burger={show_burger}/>
+<Nav  handle_burger={handle_burger} show_burger={show_burger} setShow_burger={setShow_burger} />
+
  
 
-
-
-     
-    const showLogin=()=>{
-        setLoginshow((prevState) => !prevState);
-      
-    }
-    return(
-        
-<div className={s.header +' '+(themeMode? s.header_light:s.header_dark) }>
-<Logo/>
-{ loginShow&&log? <div className={ (themeMode? s.header_light:s.header_dark) } onMouseOver={()=>showLogin()}   >{log }</div> :<NavLink  to={"/Login"}  className = { navData => navData.isActive ? s.active   : "" }>Login</NavLink>} 
-<NavLink to={"/Test"}  className = { navData => navData.isActive ? s.active : "" }>Test</NavLink>
-<NavLink to={"/News"}  className = { navData => navData.isActive ? s.active : "" }>News</NavLink>
-{/* <NavLink to={"/CV"}  className = { navData => navData.isActive ? s.active : "" }>CV</NavLink> */}
-<NavLink to={"/ChuckNorrisTalking"}  className = { navData => navData.isActive ? s.active : "" }>ChuckNorrisTalking</NavLink>
-<ThemeToggleWrapper/>
-
-
-
-    
 </div>
     )
 }
